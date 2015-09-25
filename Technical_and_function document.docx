@@ -1,0 +1,22 @@
+Technical and function document for URL Shortener
+
+Programming Languages: PHP 5.4
+Database: MySQL 5
+
+Overview:
+This application is created to generate short URLs for a given URL. URL shortening   is very useful in situations where 
+there is a limitation on number of characters. This application is created using PHP OOP and mysql database is used to store 
+the short URLs.  .htaccess file is used to handle correct redirection.
+
+Configuration File:
+--------------------
+Config.php – This file contains configuration details of database server.
+
+Classes
+--------
+classes/db.php – This class handles all database related functionalities, such as creating database, table and connection etc.
+classes/url.php – This class handles short URL related functions such as creating a short URL and storing it in database table, retrieving actual URL from  given short URL etc. This class is a child class of db.
+
+Database structure:
+-------------------
+This application checks and creates required database and table at runtime. Proper data types and indexes are created.
