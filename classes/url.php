@@ -11,7 +11,6 @@ class url extends db{
 		return $this->redirect;
 	}
 	public function setRedirectUrl($post_url){
-		//echo "<pre>";print_r($_SERVER);exit;
 		$str_rand = substr(str_shuffle('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'), 0, 5);
 		$qrySetRedirectUrl = "INSERT INTO tbl_urls (link, short_url, client_ip) VALUES('".addslashes($post_url)."','".$str_rand."','".$_SERVER['REMOTE_ADDR']."')";
 		$resSetRedirectUrl = mysql_query($qrySetRedirectUrl) or die(mysql_error($this->con));
